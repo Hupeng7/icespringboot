@@ -1,0 +1,32 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/icecream?zeroDateTimeBehavior=round
+    username: root
+    password: root
+
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+
+  http:
+    encoding:
+      force: true
+    multipart:
+      enabled: true
+      max-file-size: 300MB
+      max-request-size: 300MB
+
+mybatis:
+  type-aliases-package: com.abc.icespringboot.pojo
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+
+server:
+  port: 8099
+
+p1_MerId: 10001126856
+keyValue: 69cl522AV6q613Ii4W6u8K6XuW8vM1N6bFgyv769220IuYe9u37N4y7rI4Pl
+responseURL: http://localhost:8099/CallBack
