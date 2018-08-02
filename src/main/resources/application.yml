@@ -25,7 +25,7 @@ mybatis:
   mapper-locations: classpath:/mybatis/mappers/*.xml
 
 server:
-  port: 8099
+  port: 8090
 
 p1_MerId: 10001126856
 keyValue: 69cl522AV6q613Ii4W6u8K6XuW8vM1N6bFgyv769220IuYe9u37N4y7rI4Pl
