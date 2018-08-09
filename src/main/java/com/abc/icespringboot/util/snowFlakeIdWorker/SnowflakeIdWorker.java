@@ -1,4 +1,4 @@
-package com.abc.icespringboot.util;
+package com.abc.icespringboot.util.snowFlakeIdWorker;
 
 /**
  * Twitter_Snowflake<br>
