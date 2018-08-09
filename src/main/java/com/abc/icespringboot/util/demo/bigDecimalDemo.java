@@ -1,6 +1,7 @@
 package com.abc.icespringboot.util.demo;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class bigDecimalDemo {
     public static void main(String[] args) {
@@ -27,5 +28,13 @@ public class bigDecimalDemo {
         charThree[0] = '1';
         charThree[4] = '5';
         System.out.println(charThree);
+
+        String s = "a,b,c,,";
+        String[] a = s.split(",");
+        //NPE
+        System.out.println(a[a.length]);
+        System.out.println(a.length);
+
+
     }
 }
