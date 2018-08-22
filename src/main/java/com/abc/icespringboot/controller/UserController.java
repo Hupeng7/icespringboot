@@ -22,7 +22,6 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/findById")
-    //@ResponseBody
     public String findAll(Integer id, Model model) {
         User user = userService.findById(id);
         model.addAttribute("user", user);

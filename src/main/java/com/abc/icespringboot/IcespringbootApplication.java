@@ -10,9 +10,21 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableTransactionManagement
 @SpringBootApplication
-//扫描Mapper包 为其创建代理对象
+
+/**
+ * 扫描Mapper包 为其创建代理对象
+ */
 @MapperScan(value = "com.abc.icespringboot.mapper")
+/**
+ * 使用定时任务注解
+ */
 @EnableScheduling
+/**
+ * @author hp
+ * @version 1.0
+ * @description: ${description}
+ * @date: 13:40 2018/8/10 0010
+ */
 public class IcespringbootApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
