@@ -9,19 +9,22 @@ package com.abc.icespringboot.util.designmodesdemo.factorydemo;
 public class OperationTest {
     public static void main(String[] args) {
         Operation operationA;
-        operationA = OperationFactory.createOperation("+");
+        String operate = "+";
+        operationA = OperationFactory.createOperation(operate);
         operationA.setNumberA(1L);
         operationA.setNumberB(2L);
-        System.out.println(operationA.getNumberA() + "与" + operationA.getNumberB() + "运算后为: " + operationA.getResult());
+        System.out.println(operationA.getNumberA() + operate + operationA.getNumberB() + " = " + operationA.getResult());
 
         Operation operationB;
-        operationB = OperationFactory.createOperation("/");
+        operate = "/";
+        operationB = OperationFactory.createOperation(operate);
         operationB.setNumberA(4L);
         operationB.setNumberB(0L);
         System.out.println(operationB.getResult());
 
         Operation operationC;
-        operationC = OperationFactory.createOperation("^");
+        operate = "^";
+        operationC = OperationFactory.createOperation(operate);
         operationC.setNumberA(3L);
         operationC.setNumberB(2L);
         System.out.println(operationC.getResult());
