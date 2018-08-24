@@ -16,14 +16,11 @@ public class HelloDemoTwo {
         int d = c + 1;
         int e = d + 2;
 
-
         int a1 = 2;
         int a2 = 2;
         int i = a1 + a2;
         System.out.println(a1 + a2);
 
         int i1 = a1 + a2;
-
-
     }
 }

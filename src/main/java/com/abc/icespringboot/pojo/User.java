@@ -23,6 +23,15 @@ public class User implements Serializable {
     @NotEmpty(message = "手机号不能为空")
     private String phone;
 
+    public User() {
+    }
+
+    public User(Integer id, String nickname, String phone) {
+        this.id = id;
+        this.nickname = nickname;
+        this.phone = phone;
+    }
+
     public Integer getId() {
         return id;
     }

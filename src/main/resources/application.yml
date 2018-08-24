@@ -19,6 +19,44 @@ spring:
       max-file-size: 300MB
       max-request-size: 300MB
 
+#  rabbitmq:
+#    virtual-host: /
+#    port: 5672
+#    password: admin
+#    username: admin
+#    host: 127.0.0.1
+#    listener:
+#      simple:
+#        default-requeue-rejected: false
+#        retry:
+#          max-attempts: 3
+#          enabled: true
+
+
+#  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    listener:
+    #消费者自动启动
+      auto-startup: true
+    #消费失败，自动重新入队
+      default-requeue-rejected: true
+    #消费者每次从队列获取的消息数量
+      prefetch: 10000
+    #消费者数量
+      concurrency: 10000
+      max-concurrency: 10000
+    #启用发送重试
+      retry:
+        enabled: true
+        initial-interval: 1000
+        max-attempts: 3
+        multiplier: 1.0
+        max-interval: 10000
+
 mybatis:
   type-aliases-package: com.abc.icespringboot.pojo
   config-location: classpath:/mybatis/mybatis-config.xml
@@ -30,3 +68,5 @@ server:
 p1_MerId: 10001126856
 keyValue: 69cl522AV6q613Ii4W6u8K6XuW8vM1N6bFgyv769220IuYe9u37N4y7rI4Pl
 responseURL: http://localhost:8099/CallBack
+
+

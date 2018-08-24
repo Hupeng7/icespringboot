@@ -98,6 +98,11 @@
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
         <!-- shiro spring. -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
@@ -153,10 +158,20 @@
             <artifactId>javax.ws.rs-api</artifactId>
             <version>2.0.1</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.rabbitmq</groupId>-->
+            <!--<artifactId>amqp-client</artifactId>-->
+            <!--<version>4.0.2</version>-->
+        <!--</dependency>-->
         <dependency>
-            <groupId>com.rabbitmq</groupId>
-            <artifactId>amqp-client</artifactId>
-            <version>4.0.2</version>
+            <groupId>com.alibaba1</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.47</version>
         </dependency>
     </dependencies>
 

@@ -1,4 +1,4 @@
-package com.abc.icespringboot.util.rabbitmqdemo;
+package com.abc.icespringboot.util.rabbitmqdemo.senderandreceiver;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -31,7 +31,7 @@ public class Sender {
             channel = connection.createChannel();
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
             String message;
-            int count = 1000000;
+            int count = 100000;
             for (int i = 0; i < count; i++) {
 //                int mod = i % 10;
 //                System.out.println("mod is :"+mod);

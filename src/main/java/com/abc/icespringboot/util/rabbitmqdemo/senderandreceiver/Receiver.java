@@ -1,4 +1,4 @@
-package com.abc.icespringboot.util.rabbitmqdemo;
+package com.abc.icespringboot.util.rabbitmqdemo.senderandreceiver;
 
 import com.rabbitmq.client.*;
 
@@ -26,6 +26,7 @@ public class Receiver {
         try {
             factory = new ConnectionFactory();
             factory.setHost("localhost");
+
             connection = factory.newConnection();
             channel = connection.createChannel();
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
