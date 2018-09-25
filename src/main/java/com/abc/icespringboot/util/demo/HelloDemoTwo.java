@@ -22,5 +22,13 @@ public class HelloDemoTwo {
         System.out.println(a1 + a2);
 
         int i1 = a1 + a2;
+
+
+        int count = 0;
+        int sum;
+        for (int j = 0; j < 10; j++) {
+            sum = count++;
+            System.out.println(sum);
+        }
     }
 }
