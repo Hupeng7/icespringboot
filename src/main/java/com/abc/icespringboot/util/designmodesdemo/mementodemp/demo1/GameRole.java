@@ -30,6 +30,7 @@ public class GameRole {
         System.out.printf("体力: %d", this.vit);
         System.out.printf("攻击力: %d", this.atk);
         System.out.printf("防御力: %d", this.def);
+        System.out.println();
     }
 
     public void getInitState() {

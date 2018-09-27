@@ -4,27 +4,28 @@ package com.abc.icespringboot.util.designmodesdemo.iteratordemo;
  * @author hp
  * @version 1.0
  * @description: ${description}
- * @date: 16:34 2018/9/3 0003
+ * @date: 16:10 2018/9/25 0025
  */
-public class ConcreteIterator extends Iterator {
+public class ConcreteIteratorDesc extends Iterator {
     private ConcreteAggregate aggregate;
 
     private int current = 0;
 
-    public ConcreteIterator(ConcreteAggregate aggregate) {
+    public ConcreteIteratorDesc(ConcreteAggregate aggregate) {
         this.aggregate = aggregate;
+        current = aggregate.getCount() - 1;
     }
 
     @Override
     public Object first() {
-        return aggregate.getItems(0);
+        return aggregate.getItems(aggregate.getCount() - 1);
     }
 
     @Override
     public Object next() {
         Object result = null;
-        current++;
-        if (current < aggregate.getCount()) {
+        current--;
+        if (current >= 0) {
             result = aggregate.getItems(current);
         }
         return result;
@@ -32,7 +33,7 @@ public class ConcreteIterator extends Iterator {
 
     @Override
     public boolean isdone() {
-        return current >= aggregate.getCount() ? true : false;
+        return current < 0 ? true : false;
     }
 
     @Override
