@@ -1,6 +1,6 @@
 package com.abc.icespringboot.util.randomobjectvalue;
 
-import org.apache.commons.lang3.StringUtils;
+import org.springframework.util.StringUtils;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;

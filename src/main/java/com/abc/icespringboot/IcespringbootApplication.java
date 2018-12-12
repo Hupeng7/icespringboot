@@ -25,8 +25,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @description: ${description}
  * @date: 13:40 2018/8/10 0010
  */
-public class
-IcespringbootApplication extends SpringBootServletInitializer {
+public class IcespringbootApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(IcespringbootApplication.class);

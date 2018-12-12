@@ -142,7 +142,7 @@ public class SnowflakeIdWorker {
     /** 测试 */
     public static void main(String[] args) {
         SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 0);
-        int count =5;
+        int count =5000;
         for (int i = 0; i < count; i++) {
             long id = idWorker.nextId();
             System.out.println(Long.toBinaryString(id));
