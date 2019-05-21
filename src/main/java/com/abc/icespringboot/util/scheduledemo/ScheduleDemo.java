@@ -35,7 +35,13 @@ import java.util.concurrent.TimeUnit;
  * "0 0-5 14 * * ?"    每天14:00至14:05每分钟一次触发
  * "0 10,44 14 ? 3 WED"    三月的每周三的14：10和14：44触发
  * "0 15 10 ? * MON-FRI"    每个周一、周二、周三、周四、周五的10：15触发
- *
+ * 
+ * @Scheduled详解
+ * 在上面的入门例子中，使用了@Scheduled(fixedRate = 5000) 注解来定义每过5秒执行的任务，对于@Scheduled的使用可以总结如下几种方式：
+ * @Scheduled(fixedRate = 5000) ：上一次开始执行时间点之后5秒再执行
+ * @Scheduled(fixedDelay = 5000) ：上一次执行完毕时间点之后5秒再执行
+ * @Scheduled(initialDelay=1000, fixedRate=5000) ：第一次延迟1秒后执行，之后按fixedRate的规则每5秒执行一次
+ * @Scheduled(cron="0/5 * * * * *") ：通过cron表达式定义规则
  */
 /**
  * @author hp
